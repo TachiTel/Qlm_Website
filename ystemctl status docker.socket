@@ -1,0 +1,16 @@
+[0;1;31m×[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (]8;;file://jordanarch/usr/lib/systemd/system/docker.service/usr/lib/systemd/system/docker.service]8;;; [0;1;32menabled[0m; preset: [0;1;38;5;185mdisabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Tue 2023-12-12 22:16:35 GMT; 26s ago
+TriggeredBy: [0;1;31m×[0m docker.socket
+       Docs: ]8;;https://docs.docker.comhttps://docs.docker.com]8;;
+    Process: 45888 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 45888 (code=exited, status=1/FAILURE)
+        CPU: 80ms
+
+Dec 12 22:16:35 jordanarch systemd[1]: docker.service: Scheduled restart job, restart counter is at 3.
+Dec 12 22:16:35 jordanarch systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mdocker.service: Start request repeated too quickly.[0m
+Dec 12 22:16:35 jordanarch systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mdocker.service: Failed with result 'exit-code'.[0m
+Dec 12 22:16:35 jordanarch systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
+Dec 12 22:16:55 jordanarch systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mdocker.service: Start request repeated too quickly.[0m
+Dec 12 22:16:55 jordanarch systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mdocker.service: Failed with result 'exit-code'.[0m
+Dec 12 22:16:55 jordanarch systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m
