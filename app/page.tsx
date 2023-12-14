@@ -4,14 +4,13 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <body>
-      
+      <div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+      </div>
+
       <header>
-        <link href="https://css.gg/css" rel="stylesheet" />
-        <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
-        <link
-          href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css"
-          rel="stylesheet"
-        />
         <div className="title">
         <Link href="/">
         <Image
@@ -54,7 +53,9 @@ export default function Home() {
         Welcome to QLM. We are part of the University of Southamptons School of Physics and Astronomy. <br></br>
         We are made up of multiple groups including Prof. Otto Muskens, Prof. Hendriks, etc.
       </div>
-    
+      <footer>
+        <h1>kek</h1>
+      </footer>
     </body>
   )
 }

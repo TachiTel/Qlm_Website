@@ -4,12 +4,6 @@ export default function Page() {
     return (
         <body>
         <header>
-        <link href="https://css.gg/css" rel="stylesheet" />
-          <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
-          <link
-            href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css"
-            rel="stylesheet"
-          />
       
       <div className="title">
         <Link href="/">

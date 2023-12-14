@@ -16,13 +16,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
       <link href="https://css.gg/css" rel="stylesheet" />
           <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
           <link
             href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css"
             rel="stylesheet"
           />
+      </head>
+      
+      <body>{children}
+      
+      </body>
+      
     </html>
   )
 }
