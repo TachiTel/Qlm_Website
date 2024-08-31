@@ -1,5 +1,64 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import type { ReactNode } from 'react'
+import exp from 'constants'
+import data from './data.json'
+import { promises as fs } from 'fs';
+
+export async function getPeople() {
+  return {
+    
+      pageContent: (page:string): ReactNode | null => {
+          return <div className="person">
+          <div className="image">
+            <Image
+              src=""
+              width={100}
+              height={100}
+              alt="Placeholder Picture" /></div>
+          <div className="text">
+            <h1>Otto Muskens</h1>
+            <h2>Area of Study: </h2>
+            <h3>Lorum Ipsum</h3>
+          </div>
+          <button><Link href="#"><i className="gg-arrow-right-r"></i></Link></button>
+        </div>
+      }
+    
+  }
+}
+
+export async function loop() {
+  var returnVals: JSX.Element[] = [];
+  const returnJSON = await fs.readFile(process.cwd() + '/app/nano/data.json','utf-8');
+  const out = JSON.parse(returnJSON);
+  for (const key in out.People){
+    //console.log(`${key} : ${out.People[key]}`);
+    returnVals.push(retHTML(out.People[key].Name, out.People[key].AOS, out.People[key].About, out.People[key].Picture, out.People[key].PageName));
+  }
+  return returnVals
+}
+
+export function retHTML(name: string, aos: string, about: string, pic: string, page: string) {
+  return (
+    <div className="person">
+          <div className="image">
+            <Image
+              src={pic}
+              width={100}
+              height={100}
+              alt={pic} /></div>
+          <div className="text">
+            <h1>{name}</h1>
+            <h2>Area of Study: {aos}</h2>
+            <h3>{about}</h3>
+          </div>
+          <button><Link href={page}><i className="gg-arrow-right-r"></i></Link></button>
+        </div>)
+}
+
+
+
 export default function Page() {
     return (
         <body>
@@ -19,15 +78,15 @@ export default function Page() {
 
       <div className="options">
         <div className="dropdown">
-          <button className="dropbtn">Groups
-            <i className="fa fa-caret-down"></i>
-          </button>
-          <div className="dropdown-content">
-            <a className="active" href="/nano">Integrated Nanophotonics</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-          </div>
+            <button className="dropbtn"><Link href="nano">People</Link>
+              <i className="fa fa-caret-down"></i>
+            </button>
+            <div className="dropdown-content">
+              <a href="nano">Otto Muskens</a>
+              <a href="nano/jordan">Jordan Scott</a>
+              <a href="#">Priya Deoli</a>
+            </div>
+            </div>
         <div><Link href="/contact">Contact</Link></div>
       </div>
       
@@ -43,7 +102,16 @@ export default function Page() {
     </header> 
         <div className="people">
             
-            <div className="person">
+            
+            <div>{loop()}</div>
+              
+            
+        </div>
+      
+      </body>
+    )
+  }
+  /*<div className="person">
                 <div className="image">
                 <Image
                     src="/Jordan.png"
@@ -67,14 +135,9 @@ export default function Page() {
                     alt="Placeholder Picture"
                     /></div>
                 <div className="text">
-                <h1>Name</h1>
+                <h1>Otto Muskens</h1>
                 <h2>Area of Study: </h2>
                 <h3>Lorum Ipsum</h3>
                 </div>
                 <button><Link href="#"><i className="gg-arrow-right-r"></i></Link></button>
-            </div>
-        </div>
-      
-      </body>
-    )
-  }
+            </div>*/

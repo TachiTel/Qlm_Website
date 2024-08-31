@@ -1,0 +1,33 @@
+{
+    "People": 
+        {
+
+        "Otto":
+        {
+            "Name": "Prof. Otto Muskens",
+            "AOS": "Integrated Nanophotonics",
+            "About": "Professor of Physics at the University of Southampton.",
+            "Picture": "",
+            "PageName": "nano"
+        },
+        "Jordan": 
+            {
+                "Name": "Jordan Scott",
+                "AOS": "Metalenses",
+                "About": "Hi, I'm Jordan, a PGR at the University of Southampton",
+                "Picture": "/Jordan.png",
+                "PageName": "nano/jordan"
+            },
+        
+        "Priya": 
+            {
+                "Name": "Priya Deoli",
+                "AOS": "Phase Change Materials",
+                "About": "A PGR Student hailing from Delhi, India",
+                "Picture": "",
+                "PageName": "nano"
+            }
+        
+    }
+
+}

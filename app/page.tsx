@@ -25,13 +25,13 @@ export default function Home() {
 
         <div className="options">
           <div className="dropdown">
-            <button className="dropbtn">Groups
+            <button className="dropbtn"><Link href="nano">People</Link>
               <i className="fa fa-caret-down"></i>
             </button>
             <div className="dropdown-content">
-              <a href="nano">Integrated Nanophotonics</a>
-              <a href="#">Quantum Information</a>
-              <a href="#">Link 3</a>
+              <a href="nano">Otto Muskens</a>
+              <a href="nano/jordan">Jordan Scott</a>
+              <a href="#">Priya Deoli</a>
             </div>
             </div>
           <div><Link href="contact">Contact</Link></div>
@@ -50,8 +50,9 @@ export default function Home() {
        
       
       <div className="intro">
-        Welcome to QLM. We are part of the University of Southamptons School of Physics and Astronomy. <br></br>
-        We are made up of multiple groups including Prof. Otto Muskens, Prof. Hendriks, etc.
+        Welcome to the Integrated Nanophotonics Group. We are part of the University of Southamptons School of Physics and Astronomy. <br></br>
+        We are a PhD group dedicated to the research of photonics at the nano scale from metalenses to photonic computing.<br></br>
+        We work with a variety of partners in industry to advance the field of Nanophotonics under the supervision of Prof. Otto Muskens.
       </div>
       <footer>
         <h1>kek</h1>

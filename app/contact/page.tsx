@@ -24,16 +24,16 @@ export default function Page() {
       </div>
 
       <div className="options">
-        <div className="dropdown">
-          <button className="dropbtn">Groups
-            <i className="fa fa-caret-down"></i>
-          </button>
-          <div className="dropdown-content">
-            <a className="active" href="/nano">Integrated Nanophotonics</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-          </div>
+      <div className="dropdown">
+            <button className="dropbtn"><Link href="nano">People</Link>
+              <i className="fa fa-caret-down"></i>
+            </button>
+            <div className="dropdown-content">
+              <a href="nano">Otto Muskens</a>
+              <a href="nano/jordan">Jordan Scott</a>
+              <a href="#">Priya Deoli</a>
+            </div>
+            </div>
         <div><Link href="/contact">Contact</Link></div>
       </div>
       
