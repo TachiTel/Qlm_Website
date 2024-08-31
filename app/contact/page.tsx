@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Contact from '/components/contact';
 export default function Page() {
     return (
         <body>
@@ -47,6 +48,9 @@ export default function Page() {
           />
         </div>
     </header> 
+    <main className='flex min-h-screen flex-col items-center justify-center p-24 bg-white'>
+      <Contact />
+    </main>
         
       
       </body>
